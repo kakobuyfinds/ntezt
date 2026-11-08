@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#40334f">
+  <meta name="color-scheme" content="light">
+  <title>PinguBuy spreadsheet: kleding, sneakers en slimme keuzes</title>
+  <meta name="description" content="Gebruik deze PinguBuy spreadsheet-gids om sneakers, kleding en accessoires te vergelijken. Bekijk categorieën en controleer maten, QC-foto’s en totale kosten.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:title" content="PinguBuy spreadsheet: van inspiratie naar een bewuste keuze">
+  <meta property="og:description" content="Een onafhankelijke Nederlandstalige gids voor productlinks, maattabellen, QC-foto’s en het samenstellen van een overzichtelijke shortlist.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PinguBuy spreadsheet — Nederlandse winkelgids">
+  <meta name="twitter:description" content="Ontdek categorieën en leer hoe je maten, materialen, foto’s en verzendkosten zorgvuldig vergelijkt.">
+  <link rel="dns-prefetch" href="//www.tike.gr">
+  <link rel="preconnect" href="https://www.tike.gr">
+  <style>
+    :root{
+      --paper:#f6f2e9;
+      --white:#fffdf8;
+      --ink:#292431;
+      --muted:#655e69;
+      --purple:#40334f;
+      --lavender:#e4dced;
+      --lime:#e4edb0;
+      --line:#d9d1c9;
+      --radius:18px;
+      --max:1220px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-size:16px;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-underline-offset:4px}
+    a:focus-visible,summary:focus-visible{
+      outline:3px solid #736095;
+      outline-offset:5px;
+      border-radius:4px;
+    }
+    img{display:block;width:100%;height:auto}
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2,h3{line-height:1.12;text-wrap:balance}
+    h1{font-size:clamp(2.6rem,5.7vw,5.15rem);letter-spacing:-.065em}
+    h2{font-size:clamp(1.8rem,3.4vw,3rem);letter-spacing:-.045em}
+    h3{font-size:1.2rem;letter-spacing:-.025em}
+    p{max-width:72ch}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+    .topline{background:var(--purple);color:#fff;padding:9px 24px;text-align:center;font-size:.77rem;letter-spacing:.055em}
+    .masthead{display:flex;align-items:center;justify-content:space-between;gap:22px;padding-block:23px}
+    .brand{font-size:1.2rem;font-weight:800;text-decoration:none;letter-spacing:-.045em;white-space:nowrap}
+    .brand-mark{display:inline-grid;place-items:center;width:33px;height:33px;border-radius:50%;background:var(--lime);margin-right:7px;font-size:.85rem}
+    .masthead-note{font-size:.8rem;color:var(--muted)}
+    .text-link{font-weight:700;font-size:.88rem}
+    .category-panel{border:1px solid var(--line);background:var(--white);border-radius:var(--radius);padding:20px}
+    .category-top{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:15px}
+    .eyebrow{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+    .tiny{font-size:.78rem;color:var(--muted)}
+    .categories{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+    .categories a{
+      display:flex;align-items:center;justify-content:space-between;gap:8px;
+      padding:13px 12px;border-radius:8px;background:var(--paper);
+      font-size:.82rem;font-weight:650;text-decoration:none;
+    }
+    .categories a:hover{background:var(--lavender)}
+    .categories span{color:#776b84;font-weight:400}
+    .hero{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center;padding-block:56px}
+    .hero-copy .eyebrow{margin-bottom:20px;color:#6e577f}
+    .hero-copy h1{max-width:11ch}
+    .hero-copy .intro{font-size:1.08rem;margin-top:25px;color:var(--muted)}
+    .hero-copy strong{color:var(--ink)}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:27px}
+    .button{
+      display:inline-flex;align-items:center;justify-content:center;gap:16px;
+      padding:14px 21px;background:var(--purple);color:white;
+      border-radius:9px;text-decoration:none;font-weight:700;font-size:.9rem;
+    }
+    .button:hover{background:#59456d}
+    .hero-note{font-size:.76rem;color:var(--muted);margin-top:17px;max-width:52ch}
+    .hero-art{position:relative;padding:22px 0 28px 20px}
+    .hero-art:before{content:"";position:absolute;inset:0 25px 55px 0;background:var(--lavender);border-radius:130px 18px 18px 18px}
+    .hero-art figure{position:relative}
+    .main-image{background:#fff;border-radius:100px 12px 12px 12px;overflow:hidden;border:1px solid #e4dde7}
+    .main-image img{aspect-ratio:1.22;object-fit:contain;padding:18px}
+    .main-image figcaption{padding:15px 20px;border-top:1px solid #eee8e5;font-size:.8rem}
+    .floating-label{position:absolute;right:10px;bottom:0;background:var(--lime);padding:14px 21px;border-radius:9px;transform:rotate(-3deg);font-weight:750;font-size:.83rem}
+    .answer-strip{display:grid;grid-template-columns:.65fr 1.7fr;gap:35px;padding:28px 32px;background:var(--purple);color:white;border-radius:var(--radius)}
+    .answer-strip h2{font-size:1.45rem;letter-spacing:-.025em}
+    .answer-strip p{font-size:.96rem;color:#eee7f2}
+    .section{padding-block:58px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:28px}
+    .section-head .eyebrow{margin-bottom:12px;color:#6e577f}
+    .section-head p{max-width:42ch;color:var(--muted);font-size:.9rem}
+    .looks{display:grid;grid-template-columns:1.15fr 1fr 1fr 1fr;gap:16px}
+    .look{background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .look figure{background:#fff}
+    .look img{aspect-ratio:1;object-fit:contain;padding:12px}
+    .look figcaption{font-size:.72rem;color:var(--muted);padding:0 16px 13px}
+    .look-body{padding:18px;border-top:1px solid var(--line)}
+    .look h3{font-size:1.04rem;margin-bottom:10px}
+    .look p{font-size:.84rem;color:var(--muted);margin-bottom:15px}
+    .look a{font-size:.8rem;font-weight:750}
+    .caption-note{font-size:.78rem;color:var(--muted);margin-top:17px}
+    .guide-layout{display:grid;grid-template-columns:.64fr 1.5fr;gap:55px;border-top:1px solid var(--line)}
+    .guide-intro{padding-top:55px}
+    .guide-intro .eyebrow{margin-bottom:14px;color:#6e577f}
+    .guide-intro p{margin-top:20px;color:var(--muted);font-size:.95rem}
+    .steps{list-style:none;padding:28px 0 0;margin:0;counter-reset:step}
+    .steps li{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:25px 0;border-bottom:1px solid var(--line);counter-increment:step}
+    .steps li:before{content:"0" counter(step);font-size:.8rem;font-weight:800;background:var(--lavender);width:36px;height:36px;display:grid;place-items:center;border-radius:50%}
+    .steps h3{margin-bottom:9px}
+    .steps p{color:var(--muted);font-size:.92rem}
+    .comparison{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+    .table-scroll{overflow-x:auto}
+    table{width:100%;border-collapse:collapse;font-size:.9rem}
+    caption{text-align:left;padding:24px;font-size:1.25rem;font-weight:750}
+    th,td{text-align:left;vertical-align:top;padding:17px 23px;border-top:1px solid var(--line)}
+    thead{background:var(--lavender)}
+    th{font-weight:750}
+    tbody th{width:22%}
+    td{color:var(--muted)}
+    .editorial{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .article{border-top:3px solid var(--purple);padding:26px 0}
+    .article .eyebrow{color:#71647d;margin-bottom:15px}
+    .article h3{font-size:1.6rem;margin-bottom:18px}
+    .article p{color:var(--muted);font-size:.94rem;margin-bottom:15px}
+    .article ul{padding-left:20px;color:var(--muted);font-size:.92rem}
+    .article li{margin-bottom:9px}
+    .faq-layout{display:grid;grid-template-columns:.7fr 1.4fr;gap:60px}
+    .faq-layout .eyebrow{margin-bottom:14px;color:#6e577f}
+    .faq-layout>div>p{margin-top:18px;color:var(--muted)}
+    details{border-bottom:1px solid var(--line);padding:20px 0}
+    details:first-child{padding-top:0}
+    summary{cursor:pointer;font-weight:750;line-height:1.45;padding-right:12px}
+    details p{padding-top:13px;color:var(--muted);font-size:.92rem}
+    .closing{background:var(--lime);border-radius:var(--radius);padding:35px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .closing h2{font-size:1.8rem}
+    .closing p{margin-top:10px;font-size:.92rem;max-width:60ch}
+    footer{border-top:1px solid var(--line);margin-top:55px;padding-block:30px 40px}
+    .footer-top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:17px}
+    footer p{font-size:.76rem;color:var(--muted);max-width:100ch}
+    @media(min-width:1000px){
+      .lower{content-visibility:auto;contain-intrinsic-size:auto 800px}
+    }
+    @media(max-width:1000px){
+      .hero{gap:28px}
+      .looks{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .categories{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .guide-layout,.faq-layout{gap:30px}
+    }
+    @media(max-width:700px){
+      .wrap{width:calc(100% - 32px)}
+      .topline{font-size:.67rem}
+      .masthead{padding-block:19px}
+      .masthead-note{display:none}
+      .brand{font-size:1.05rem}
+      .category-panel{padding:14px}
+      .category-top{align-items:start}
+      .category-top .tiny{max-width:18ch;text-align:right}
+      .categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+      .categories a{font-size:.76rem;padding:12px 9px}
+      .hero{grid-template-columns:1fr;padding-block:36px;gap:27px}
+      .hero-copy h1{max-width:13ch}
+      .hero-copy .intro{font-size:1rem}
+      .hero-art{padding-left:14px}
+      .main-image img{aspect-ratio:1.4}
+      .answer-strip{grid-template-columns:1fr;gap:15px;padding:25px}
+      .section{padding-block:38px}
+      .section-head{display:block}
+      .section-head>p{margin-top:17px}
+      .looks{gap:10px}
+      .look-body{padding:13px}
+      .look figcaption{padding-inline:13px;font-size:.66rem}
+      .guide-layout,.faq-layout,.editorial{grid-template-columns:1fr;gap:18px}
+      .guide-intro{padding-top:35px}
+      .steps{padding-top:0}
+      .article{padding-top:23px}
+      .faq-layout{gap:28px}
+      .closing{display:block;padding:26px}
+      .closing .button{margin-top:23px}
+      .footer-top{align-items:start;flex-direction:column;gap:10px}
+      table{min-width:610px}
+    }
+    @media(prefers-reduced-motion:no-preference){
+      .button,.categories a{transition:background-color .15s ease}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "name":"PinguBuy spreadsheet: kleding, sneakers en slimme keuzes",
+        "description":"Een onafhankelijke Nederlandstalige gids voor het vergelijken van productlinks, maten, QC-foto’s en totale kosten.",
+        "inLanguage":"nl",
+        "about":{
+          "@type":"Thing",
+          "name":"PinguBuy spreadsheet",
+          "description":"Een overzicht van productverwijzingen dat kan helpen bij het vergelijken van kleding, sneakers en accessoires."
+        }
+      },
+      {
+        "@type":"Article",
+        "headline":"Een bruikbare PinguBuy shortlist in vier stappen",
+        "inLanguage":"nl",
+        "description":"Kies een categorie, controleer de productverwijzing, vergelijk meetgegevens en bekijk de volledige kosten.",
+        "articleBody":"Begin met één productcategorie en een duidelijke gebruikswens. Controleer daarna of de productverwijzing nog hetzelfde model, dezelfde kleur en dezelfde uitvoering toont. Vergelijk afmetingen met een passend kledingstuk of paar schoenen. Bewaar de productlink, gekozen maat, datum van controle en ontbrekende informatie. Bereken vóór betaling de productprijs, eventuele binnenlandse levering, dienstverlening, internationale verzending en toepasselijke belastingen."
+      },
+      {
+        "@type":"FAQPage",
+        "inLanguage":"nl",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Wat is een PinguBuy spreadsheet?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Een PinguBuy spreadsheet is een overzicht van productverwijzingen dat helpt bij het ontdekken en vergelijken van artikelen. Een vermelding bevestigt niet automatisch de actuele voorraad, kwaliteit of authenticiteit."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Kan ik hier rechtstreeks bij PinguBuy bestellen?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Nee. Deze pagina is een onafhankelijke gids. De categorieknoppen openen de opgegeven categorieën op hipobuyfind.com; andere links openen de homepage van HipobuyFind."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Hoe kies ik de juiste maat voor sneakers en kleding?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Vergelijk de maattabel van de specifieke uitvoering met je eigen maten. Gebruik bij schoenen de aangegeven voet- of binnenzoollengte en meet kleding plat op dezelfde manier als de verkoper. Alleen een EU-maat of de letter M is onvoldoende."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Wat vertellen QC-foto’s mij?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"QC-foto’s kunnen zichtbare details tonen, zoals kleur, naden, afmetingen en beschadigingen. Ze bewijzen geen authenticiteit, draagcomfort, materiaalsamenstelling of levensduur."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Hoe vergelijk ik de totale kosten?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Tel de productprijs, eventuele binnenlandse levering, dienstverlening, internationale verzending en toepasselijke belastingen bij elkaar op. Controleer ook of de vervoerder met werkelijk gewicht of volumegewicht rekent."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Zijn de getoonde merkbeelden een voorraad- of echtheidsgarantie?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Nee. De beelden van Nike, Louis Vuitton, Gucci, Hermès en Dior dienen als visuele stijlreferentie. Ze bevestigen geen beschikbaarheid bij HipobuyFind, geen authenticiteit van andere aanbiedingen en geen officiële samenwerking."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/ntezt/">
+</head>
+<body>
+  <!--
+    Bestandsnaam: index.html.
+    Onderzoeksnotitie: tien relevante zoekresultaten zijn als thematische
+    referenties geraadpleegd. Een exacte, locatiegebonden Google-eerste-pagina-
+    rangschikking kon niet worden bevestigd. Titels en zoekfragmenten zijn geen
+    bewijs voor kwaliteit, prijzen, voorraad of operationele dienstverlening.
+
+    Referenties en waargenomen SEO-thema’s:
+    1. pingubuyspreadsheet.com — categorieën, productontdekking, spreadsheet.
+    2. pingubuy.org — productgerichte titels, kleding en sneakers;
+       zoekfragment beschikbaar, rechtstreeks ophalen gaf een fout.
+    3. repsheet.net/spreadsheet/pingubuy — productlinks, QC, gebruiksvragen.
+    4. hacoosheetlinks.com/find/pingubuy-spreadsheet — actualiteit en linkcontrole.
+    5. linktr.ee/pingubuy2 — gedeelde spreadsheets en navigatie.
+    6. pingubuyfinds.com — finds en categoriegerichte navigatie.
+    7. spreadsheet-kakobuy.com/agents/pingubuy-spreadsheet — voorwaarden controleren.
+    8. pingubuy.com — inspectie, verpakking en verzendinformatie.
+    9. litbuysheetlinks.com/agent/pingubuy-spreadsheet — kosten en informatieactualiteit.
+    10. mickeybuys.com/agents/pingubuy — productverwijzingen en winkelproces.
+
+    Vijf ondersteunende zoekthema’s:
+    PinguBuy productlinks; PinguBuy sneakers; PinguBuy kleding;
+    PinguBuy QC-foto’s; PinguBuy verzendkosten.
+
+    Longtailonderwerpen zijn verwerkt in leesbare adviezen over onder meer:
+    sneakers vergelijken, schoenmaten, binnenzoollengte, hoodie maattabel,
+    borstbreedte, T-shirt pasvorm, schouderbreedte, jas afmetingen,
+    broek taillemaat, korte broek lengte, pet omtrek, verstelbare sluiting,
+    set maten, ondergoed materiaal, jersey bedrukking, sieraden afmetingen,
+    sjaal samenstelling, productlink controleren, kleurvariant,
+    verkopersfoto’s, QC-details, naden, beschadigingen, productgewicht,
+    volumegewicht, verpakking, gecombineerde verzending, totale kosten,
+    voorraadcontrole en een persoonlijke shortlist.
+  -->
+
+  <div class="topline">NEDERLANDSE WINKELGIDS · VAN EERSTE INDRUK NAAR EEN DOORDACHTE KEUZE</div>
+
+  <header class="wrap masthead">
+    <a class="brand" href="https://www.hipobuyfind.com">
+      <span class="brand-mark" aria-hidden="true">hf</span>hipobuyfind.com
+    </a>
+    <span class="masthead-note">Stijl ontdekken. Details controleren.</span>
+    <a class="text-link" href="https://www.hipobuyfind.com">Bekijk het overzicht ↗</a>
+  </header>
+
+  <main class="wrap">
+    <nav class="category-panel" aria-label="Productcategorieën op HipobuyFind">
+      <div class="category-top">
+        <p class="eyebrow">Begin bij je categorie</p>
+        <p class="tiny">Open de bijbehorende selectie op HipobuyFind</p>
+      </div>
+      <div class="categories">
+        <a href="https://hipobuyfind.com/category-911-Shoes.html" lang="en">Shoes <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html" lang="en">Hoodies/Sweaters <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-913-T-Shirts.html" lang="en">T-Shirts <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-914-Jackets.html" lang="en">Jackets <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html" lang="en">Pants/Shorts <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-916-Headwear.html" lang="en">Headwear <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-917-Sets.html" lang="en">Sets <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html" lang="en">Underwear/underpants <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-919-Jersey.html" lang="en">Jersey <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-920-Accessories.html" lang="en">Accessories <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">De stijl begint bij de details</p>
+        <h1 id="hero-title">PinguBuy spreadsheet</h1>
+        <p class="intro">
+          Een mooie vondst verdient een tweede blik. Gebruik deze
+          <strong>Nederlandstalige gids</strong> om sneakers, kleding en
+          accessoires te vergelijken op pasvorm, uitvoering en totale kosten.
+          Van een eerste idee naar een shortlist die je kunt controleren.
+        </p>
+        <div class="actions">
+          <a class="button" href="https://www.hipobuyfind.com">Ontdek HipobuyFind <span aria-hidden="true">↗</span></a>
+          <span class="tiny">Categorieën staan hierboven klaar.</span>
+        </div>
+        <p class="hero-note">
+          Onafhankelijke informatiepagina. Geen officiële PinguBuy-website
+          of samenwerking met de getoonde merken.
+        </p>
+      </div>
+
+      <div class="hero-art">
+        <figure class="main-image">
+          <img
+            src="https://www.tike.gr/files/images/products/media/CW2/CW2288-111/images/CW2288-111.jpg.webp"
+            alt="Witte Nike Air Force 1 ’07 sneaker van opzij, met witte Swoosh en dikke zool"
+            width="800"
+            height="656"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async">
+          <figcaption>Nike Air Force 1 ’07 · visuele referentie voor vorm en details</figcaption>
+        </figure>
+        <div class="floating-label">Eerst vergelijken. Dan kiezen.</div>
+      </div>
+    </section>
+
+    <section class="answer-strip" aria-labelledby="quick-answer">
+      <h2 id="quick-answer">Wat vind je in zo’n spreadsheet?</h2>
+      <p>
+        Een PinguBuy spreadsheet is een overzicht van productverwijzingen
+        dat helpt bij het ontdekken en vergelijken van artikelen.
+        Gebruik een rij als vertrekpunt: controleer de actuele productpagina,
+        de gekozen variant en de beschikbare meetgegevens voordat je beslist.
+        Deze pagina biedt uitleg en verwijst voor het bladeren naar HipobuyFind.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="style-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Een andere blik op je garderobe</p>
+          <h2 id="style-title">Van sportieve basis<br>naar een opvallend detail.</h2>
+        </div>
+        <p>
+          Vier stijlreferenties om gerichter te kijken.
+          De beelden illustreren vormen en combinaties; ze zijn geen
+          productaanbiedingen.
+        </p>
+      </div>
+
+      <div class="looks">
+        <article class="look">
+          <figure>
+            <img
+              src="https://uk.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-essential-scarf--M77727_PM1_Worn%20view.png?hei=640&amp;wid=640"
+              alt="Model met een camelgekleurde jas en een grijze Louis Vuitton LV Essential sjaal met licht monogram"
+              width="640" height="640" loading="lazy" decoding="async">
+            <figcaption>Louis Vuitton · sjaal en gelaagde kleding</figcaption>
+          </figure>
+          <div class="look-body">
+            <h3>Werk met lagen</h3>
+            <p>
+              Vergelijk bij een jas de borstbreedte met je favoriete trui eronder.
+              Controleer bij een sjaal de lengte, samenstelling en wasinstructies.
+            </p>
+            <a href="https://hipobuyfind.com/category-914-Jackets.html">Bekijk jassen ↗</a>
+          </div>
+        </article>
+
+        <article class="look">
+          <figure>
+            <img
+              src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg"
+              alt="Beige en bruine Gucci pet met GG-patroon en contrasterende donkere klep"
+              width="640" height="640" loading="lazy" decoding="async">
+            <figcaption>Gucci · hoofddeksel met patroon</figcaption>
+          </figure>
+          <div class="look-body">
+            <h3>Let op de omtrek</h3>
+            <p>
+              Een verstelbare sluiting zegt weinig zonder maatbereik.
+              Bekijk de petomtrek, de hoogte van de kroon en de vorm van de klep.
+            </p>
+            <a href="https://hipobuyfind.com/category-916-Headwear.html">Bekijk hoofddeksels ↗</a>
+          </div>
+        </article>
+
+        <article class="look">
+          <figure>
+            <img
+              src="https://www.luxe-em.com/cdn/shop/files/001_3e78aa64-04f3-4ec6-81eb-e3aad7cdb5bc.jpg?v=1759779439&amp;width=640"
+              alt="Oranje Hermès Les Clés zijden sjaal met symmetrisch patroon van sleutels en kwasten"
+              width="640" height="640" loading="lazy" decoding="async">
+            <figcaption>Hermès · kleur en grafische details</figcaption>
+          </figure>
+          <div class="look-body">
+            <h3>Geef kleur de ruimte</h3>
+            <p>
+              Combineer een uitgesproken patroon met rustige kleding.
+              Vergelijk detailfoto’s en materiaalinformatie; glans alleen bewijst geen zijde.
+            </p>
+            <a href="https://hipobuyfind.com/category-920-Accessories.html">Bekijk accessoires ↗</a>
+          </div>
+        </article>
+
+        <article class="look">
+          <figure>
+            <img
+              src="https://www.luxedh.com/cdn/shop/products/Dior-Crystal-DioRevolution-Chain-Choker-Necklace_185584_front_0_parent.jpg?v=1679007018&amp;width=640"
+              alt="Goudkleurige Dior DioRevolution schakelketting met DIOR-letters en heldere kristallen"
+              width="640" height="640" loading="lazy" decoding="async">
+            <figcaption>Dior · ketting als accent</figcaption>
+          </figure>
+          <div class="look-body">
+            <h3>Kijk naar de afwerking</h3>
+            <p>
+              Controleer de kettinglengte, sluiting en materiaalvermelding.
+              Vraag bij een gevoelige huid naar de exacte samenstelling.
+            </p>
+            <a href="https://hipobuyfind.com/category-920-Accessories.html">Vergelijk accessoires ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="caption-note">
+        Merkbeelden dienen uitsluitend als stijlreferentie. Ze bevestigen geen
+        voorraad bij HipobuyFind en geen echtheid van artikelen op andere productpagina’s.
+      </p>
+    </section>
+
+    <section class="guide-layout" aria-labelledby="guide-title">
+      <div class="guide-intro">
+        <p class="eyebrow">Praktische handleiding</p>
+        <h2 id="guide-title">Een bruikbare shortlist in vier stappen.</h2>
+        <p>
+          Bij PinguBuy productlinks is vooral de informatie achter de verwijzing
+          van belang. Bewaar genoeg details om twee artikelen later opnieuw
+          te kunnen vergelijken.
+        </p>
+      </div>
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>Kies één duidelijke gebruikswens</h3>
+            <p>
+              Zoek je dagelijkse sneakers, een ruime hoodie of een lichte jas?
+              Begin met één categorie. Bij PinguBuy sneakers vergelijken helpt
+              het om eerst pasvorm, gebruik en gewenste kleur vast te leggen.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Controleer de productlink en variant</h3>
+            <p>
+              Open de bestemming en vergelijk model, kleurvariant en uitvoering
+              met je notities. Een oude afbeelding kan bij een gewijzigde
+              aanbieding horen. Controleer de voorraad opnieuw en neem een
+              spreadsheetprijs niet automatisch over.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Vergelijk maten en zichtbare details</h3>
+            <p>
+              Gebruik de specifieke maattabel voor PinguBuy kleding.
+              Noteer borstbreedte, schouderbreedte en lengte. Bekijk bij
+              beschikbare PinguBuy QC-foto’s de naden, maatlabels en eventuele
+              beschadigingen; vraag om verduidelijking wanneer iets ontbreekt.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Maak de kosten volledig</h3>
+            <p>
+              Neem bij PinguBuy verzendkosten ook productgewicht, verpakking
+              en mogelijk volumegewicht mee. Bewaar productlink, gekozen maat,
+              controledatum en openstaande vragen. Beslis pas wanneer je de
+              totale kosten en retourvoorwaarden begrijpt.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section lower" aria-labelledby="measure-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Bewaar deze vergelijking</p>
+          <h2 id="measure-title">Wat meet je per categorie?</h2>
+        </div>
+        <p>
+          Meet een artikel dat je al goed past.
+          Gebruik dezelfde meetmethode als de productpagina.
+        </p>
+      </div>
+
+      <div class="comparison">
+        <div class="table-scroll" role="region" aria-label="Maattabel per productgroep" tabindex="0">
+          <table>
+            <caption>Een maatlabel is pas het begin</caption>
+            <thead>
+              <tr>
+                <th scope="col">Productgroep</th>
+                <th scope="col">Vergelijk dit</th>
+                <th scope="col">Vraag door wanneer…</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Sneakers</th>
+                <td>Voetlengte, opgegeven binnenzoollengte en beschikbare breedte-informatie.</td>
+                <td>Alleen een EU-maat staat vermeld of voetlengte en binnenzoollengte door elkaar worden gebruikt.</td>
+              </tr>
+              <tr>
+                <th scope="row">Hoodies en T-shirts</th>
+                <td>Borstbreedte, schouderbreedte, mouwlengte en totale lengte.</td>
+                <td>“Oversized” wordt genoemd zonder afmetingen of uitleg over de pasvorm.</td>
+              </tr>
+              <tr>
+                <th scope="row">Jassen</th>
+                <td>Ruimte voor onderlagen, mouwlengte, sluiting en voering.</td>
+                <td>Een dikke voering zichtbaar is, maar de binnenruimte onduidelijk blijft.</td>
+              </tr>
+              <tr>
+                <th scope="row">Broeken en shorts</th>
+                <td>Taille in rust en uitgerekt, heupbreedte, binnenbeenlengte en zoomwijdte.</td>
+                <td>Niet duidelijk is of de taillemaat een omtrek of een plat gemeten breedte is.</td>
+              </tr>
+              <tr>
+                <th scope="row">Sets en jerseys</th>
+                <td>Boven- en onderstuk afzonderlijk; bij jerseys ook plaatsing en uitvoering van bedrukking.</td>
+                <td>Eén maat wordt opgegeven voor de hele set zonder aparte meetgegevens.</td>
+              </tr>
+              <tr>
+                <th scope="row">Ondergoed en accessoires</th>
+                <td>Materiaal, huidcontact, taillebereik, omtrek, lengte en sluitingen.</td>
+                <td>Samenstelling, onderhoud of toepasselijke retourvoorwaarden ontbreken.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lower" aria-labelledby="reading-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Twee korte verdiepingen</p>
+          <h2 id="reading-title">Minder gissen.<br>Gerichter vergelijken.</h2>
+        </div>
+      </div>
+
+      <div class="editorial">
+        <article class="article">
+          <p class="eyebrow">Artikel 01 · Foto’s lezen</p>
+          <h3>Een scherpe foto vertelt niet het hele verhaal.</h3>
+          <p>
+            Verkopersfoto’s laten een artikel meestal in gunstig licht zien.
+            Vergelijk daarom verschillende aanzichten en controleer of de
+            foto’s dezelfde uitvoering tonen. Let bij sneakers op de zoolrand,
+            de aansluiting van panelen en de vorm van beide schoenen.
+          </p>
+          <p>
+            QC staat voor kwaliteitscontrole. Zulke beelden kunnen zichtbare
+            afwijkingen helpen herkennen, maar tonen geen draagcomfort of
+            levensduur. Een logo op een foto is evenmin een bewijs van authenticiteit.
+          </p>
+          <ul>
+            <li>Vraag bij onduidelijke maten om een foto met meetlint.</li>
+            <li>Vergelijk kleuren onder vergelijkbare belichting.</li>
+            <li>Controleer of detailfoto’s bij jouw gekozen variant horen.</li>
+          </ul>
+        </article>
+
+        <article class="article">
+          <p class="eyebrow">Artikel 02 · Kosten begrijpen</p>
+          <h3>De productprijs is één regel van je berekening.</h3>
+          <p>
+            Een complete vergelijking bevat de productprijs, eventuele
+            binnenlandse levering, dienstverlening, internationale verzending
+            en toepasselijke belastingen. Controleer welke onderdelen al in
+            een offerte zijn opgenomen om dubbel tellen te voorkomen.
+          </p>
+          <p>
+            Gecombineerde verzending kan de verpakking en tariefberekening
+            veranderen. Meer artikelen samen versturen betekent daarom niet
+            automatisch dat iedere keuze goedkoper wordt.
+          </p>
+          <ul>
+            <li>Vraag of werkelijk gewicht of volumegewicht bepalend is.</li>
+            <li>Neem schoenendozen en extra bescherming mee in je vergelijking.</li>
+            <li>Controleer actuele voorwaarden voordat je betaalt.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq-layout lower" aria-labelledby="faq-title">
+      <div>
+        <p class="eyebrow">Direct antwoord</p>
+        <h2 id="faq-title">Veelgestelde vragen.</h2>
+        <p>
+          De belangrijkste punten over productverwijzingen,
+          maten, foto’s en de bestemming van onze links.
+        </p>
+      </div>
+
+      <div>
+        <details open>
+          <summary>Wat is een PinguBuy spreadsheet?</summary>
+          <p>Een PinguBuy spreadsheet is een overzicht van productverwijzingen dat helpt bij het ontdekken en vergelijken van artikelen. Een vermelding bevestigt niet automatisch de actuele voorraad, kwaliteit of authenticiteit.</p>
+        </details>
+        <details>
+          <summary>Kan ik hier rechtstreeks bij PinguBuy bestellen?</summary>
+          <p>Nee. Deze pagina is een onafhankelijke gids. De categorieknoppen openen de opgegeven categorieën op hipobuyfind.com; andere links openen de homepage van HipobuyFind.</p>
+        </details>
+        <details>
+          <summary>Hoe kies ik de juiste maat voor sneakers en kleding?</summary>
+          <p>Vergelijk de maattabel van de specifieke uitvoering met je eigen maten. Gebruik bij schoenen de aangegeven voet- of binnenzoollengte en meet kleding plat op dezelfde manier als de verkoper. Alleen een EU-maat of de letter M is onvoldoende.</p>
+        </details>
+        <details>
+          <summary>Wat vertellen QC-foto’s mij?</summary>
+          <p>QC-foto’s kunnen zichtbare details tonen, zoals kleur, naden, afmetingen en beschadigingen. Ze bewijzen geen authenticiteit, draagcomfort, materiaalsamenstelling of levensduur.</p>
+        </details>
+        <details>
+          <summary>Hoe vergelijk ik de totale kosten?</summary>
+          <p>Tel de productprijs, eventuele binnenlandse levering, dienstverlening, internationale verzending en toepasselijke belastingen bij elkaar op. Controleer ook of de vervoerder met werkelijk gewicht of volumegewicht rekent.</p>
+        </details>
+        <details>
+          <summary>Zijn de getoonde merkbeelden een voorraad- of echtheidsgarantie?</summary>
+          <p>Nee. De beelden van Nike, Louis Vuitton, Gucci, Hermès en Dior dienen als visuele stijlreferentie. Ze bevestigen geen beschikbaarheid bij HipobuyFind, geen authenticiteit van andere aanbiedingen en geen officiële samenwerking.</p>
+        </details>
+      </div>
+    </section>
+
+    <aside class="closing" aria-label="Verder ontdekken">
+      <div>
+        <h2>Je volgende vondst begint met een goede vraag.</h2>
+        <p>
+          Kies een categorie, bewaar wat je aanspreekt en controleer de
+          details. Een korte, duidelijke shortlist maakt vergelijken eenvoudiger.
+        </p>
+      </div>
+      <a class="button" href="https://www.hipobuyfind.com">Ga naar HipobuyFind <span aria-hidden="true">↗</span></a>
+    </aside>
+  </main>
+
+  <footer class="wrap">
+    <div class="footer-top">
+      <a class="brand" href="https://www.hipobuyfind.com">hipobuyfind.com</a>
+      <span class="tiny">PinguBuy spreadsheet · Onafhankelijke Nederlandse gids</span>
+    </div>
+    <p>
+      Deze pagina verwerkt geen bestellingen. Controleer productinformatie,
+      beschikbaarheid en voorwaarden op de bestemming voordat je een aankoop
+      doet. Merknamen en externe afbeeldingen worden gebruikt ter identificatie
+      en visuele toelichting; de rechten blijven bij hun respectieve eigenaren.
+      Er wordt geen officiële band met PinguBuy of de afgebeelde merken gesuggereerd.
+    </p>
+  </footer>
+</body>
+</html>
